@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reviews Rated</title>
+		<meta charset = "UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+
+<body>
+	<p>
+		<h1>Welcome to Rating from Reviews</h1>
+		<h3>Write a Review to see if its a positive one 🙂 or a negative one 😔!</h3>
+	</p>
+
+	<div class="container">
+		<form action="/rating" method="POST">
+			<div class="form-group">
+				<label for="review">Enter your review:</label>
+				<textarea name="review" class="form-control" rows="10" id="review"></textarea>
+			</div>
+			<button type="submit" class="btn btn-info">Show Rating</button>
+		</form>
+	</div>
+
+	<div class="container">
+		<div class="well"><strong>{{ review_text }}</strong><br><br>{{ prediction_text }}</div>
+	</div>
+
+</body>
+</html>
